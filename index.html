@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Fa icon -->
+  <script src="https://kit.fontawesome.com/7ff5ce46be.js" crossorigin="anonymous"></script>
   <!-- VueJS -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
   <!-- Axios -->
@@ -15,12 +17,13 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root">
-    <ul>
+  <div id="root" class=" vh-100 d-flex justify-content-center align-items-center">
+    <ul v-if="numbersOfMail == mails.length ">
       <li v-for="mail in mails">
         {{ mail }}
       </li>
     </ul>
+    <i v-else class="fa-solid fa-spinner fa-spin fa-6x"></i>
   </div>
   <script src="js/script.js"></script>
 </body>
